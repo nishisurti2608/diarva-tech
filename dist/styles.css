@@ -26,3 +26,6 @@
 .service:focus-within{transform:translateY(-9px) scale(1.035);box-shadow:0 24px 48px #00000030;z-index:2}
 @media(hover:hover){.service-invitation:hover{transform:translateY(-9px) scale(1.035);box-shadow:0 24px 48px #00000030;z-index:2}}
 @media(prefers-reduced-motion:reduce){.service:hover,.service:focus-within{transform:none!important}}
+
+/* Pixels assemble into the approved mark and wordmark, then gently disperse. */
+.pixel-stage{overflow:hidden}.pixel-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;transition:opacity .6s}.pixels-ready .pixel-canvas{opacity:1}.pixel-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px}.pixel-fallback img{width:54%;height:auto}.pixel-fallback>span{font:600 clamp(20px,2.3vw,32px) var(--heading);letter-spacing:2px}.pixel-fallback b{font-weight:400}.pixels-ready .pixel-fallback{visibility:hidden}

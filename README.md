@@ -26,3 +26,7 @@ JavaScript syntax, local HTTP response, asset loading, internal fragment targets
 ## Interaction update
 
 Desktop menu toggle removed; mobile menu retained. Hero is a CSS/SVG animated logo network with pause control and reduced-motion support. Capabilities have hover and focus states with contact links. Process cards reveal on scroll. Portfolio links use www.diarva.org and the owner-supplied TMC demo URL. Reach Us shows the supplied telephone, tech@diarva.org, and Kitchener address with a specific map search.
+
+## Pixel logo hero
+
+The hero now uses hero-pixels.js to sample the approved SVG and wordmark into square particles. A 12-second cycle assembles, holds, and disperses the logo. Pausing freezes the animation; reduced motion renders the assembled logo. SVG fallback remains visible when canvas/image/font initialization fails. No particle library or additional service is required.
