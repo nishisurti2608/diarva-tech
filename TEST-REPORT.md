@@ -58,3 +58,15 @@ The launch command intentionally reports the testimonial placeholders until the 
 ## Testimonial layout refinement
 
 Removed the large preview banner. Added sample names and example companies; retained the concise Sample testimonial labels. Source checks pass with the updated labelling requirement. These remain layout examples rather than genuine customer endorsements.
+
+## SEO, service pages, and analytics readiness update
+
+- Expanded static validation passes across 7 HTML pages and 164 local references. Titles/descriptions are unique; canonical URLs match the sitemap; JSON-LD parses; no Review/AggregateRating schema is present.
+- All 17 Node tests pass: the existing 8 interaction tests, 7 analytics consent/event tests, and 2 configuration/migration tests.
+- The five new service pages and privacy page were checked in the browser at 390px and 1440px: no horizontal overflow, one h1 per page, correct canonical, no Google tag loaded with a blank Measurement ID, and no console warnings/errors captured.
+- Homepage capability navigation reaches the corresponding service page; native FAQ disclosure opens; home navigation returns correctly.
+- Analytics tests cover zero tag requests before consent, reject/accept, one page_view, withdrawal, storage denial, query/referrer sanitization, non-PII contact event labels, and stale choices. Tests use a simulated ID, not a live Google property.
+- Configuration tests use disposable copies to verify that origin changes update all canonical/schema/sitemap URLs together, leave analytics disabled unless supplied, and reject invalid origins/IDs before modifying files.
+- Outreach templates are drafts. No recipients were selected, no email account was connected, no DNS records were changed, and no emails were sent.
+
+Outstanding: intended GA4 Measurement ID, real account settings and Realtime verification, owner-selected public launch/audience, final domain/Search Console ownership verification, approved testimonial replacement/removal, and outreach targeting/consent evidence. Search ranking, index inclusion, rich results, email deliverability, and live analytics delivery are not claimed.

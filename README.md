@@ -34,3 +34,11 @@ The hero now uses hero-pixels.js to sample the approved SVG and wordmark into sq
 ## Pre-launch validation
 
 Run `python3 scripts/check-site.py` and `node --test tests/interactions.test.cjs`. See TEST-REPORT.md for browser checks, corrections, scope and limitations. Use `python3 scripts/check-site.py --launch` before a public launch; it flags the deliberately labelled sample testimonials until they are replaced or removed.
+
+## SEO and optional Google Analytics
+
+Five service detail pages and a privacy page are included under dist/. All pages have distinct metadata and canonical URLs, with a seven-page sitemap. Organization/WebSite/Service/Breadcrumb JSON-LD uses verified business details and excludes review/rating markup.
+
+Analytics remains off until the owner supplies a real GA4 Measurement ID. Configure it with scripts/configure-site.py; see marketing/ANALYTICS-SETUP.md for activation and real-account verification. Consent is required before the integration loads Google's tag. Run all tests with `node --test tests/*.test.cjs` and the expanded `python3 scripts/check-site.py`.
+
+Search visibility and outreach plans are in marketing/SEO-PLAN.md and marketing/OUTREACH-DRAFTS.md. No outreach emails have been sent. Private hosting prevents search engines from crawling the site's content; choose public access intentionally when ready. Existing sample testimonials remain a launch-content flag.

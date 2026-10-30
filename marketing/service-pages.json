@@ -1,0 +1,27 @@
+[
+  {
+    "name": "AI & Machine Learning",
+    "path": "/services/ai-development-automation/",
+    "title": "AI Development & Automation Services | Diarva Tech"
+  },
+  {
+    "name": "Data & Analytics",
+    "path": "/services/data-analytics-business-intelligence/",
+    "title": "Data Analytics & BI Services in Canada | Diarva Tech"
+  },
+  {
+    "name": "Software Engineering",
+    "path": "/services/software-website-development/",
+    "title": "Software & Website Development Canada | Diarva Tech"
+  },
+  {
+    "name": "Experience Design",
+    "path": "/services/ux-ui-design/",
+    "title": "UI/UX Design Services in Canada | Diarva Tech"
+  },
+  {
+    "name": "Cloud & Platform Engineering",
+    "path": "/services/cloud-devops-engineering/",
+    "title": "Cloud & DevOps Services in Canada | Diarva Tech"
+  }
+]
