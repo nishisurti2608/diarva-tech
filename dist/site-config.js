@@ -1,6 +1,6 @@
 // Public website configuration. GA4 Measurement IDs are not secrets.
-// Analytics remains off until the owner supplies the production web stream ID.
+// Owner-supplied GA4 stream. The Google tag loads only after visitor consent.
 window.DIARVA_CONFIG = Object.freeze({
   siteUrl: 'https://diarva-tech.boldlemon.chatgpt.site',
-  ga4MeasurementId: ''
+  ga4MeasurementId: 'G-Z3ELKJ934Z'
 });

@@ -58,3 +58,27 @@ If you would prefer no further marketing emails from Diarva Tech, reply “unsub
 - Process opt-outs and suppress future marketing messages. Configure a monitored reply mailbox; reply-based unsubscribe must be operational, not just wording in a draft.
 - No tracking pixels are included in these drafts. If campaign links are used, use campaign codes only, such as utm_source=outreach&utm_medium=email&utm_campaign=business_websites; never include recipient names or email addresses in URLs.
 - Measure relevant replies, calls and confirmed enquiries rather than treating opens or clicks as sales.
+
+## Selected audience: Canadian dental clinics
+
+The owner selected dentists as the target audience. Address practice owners or clinic managers where the message is relevant to their business role. This is a Canada-wide segment, not permission to send to every address found online. No recipient list has been supplied or collected in this task.
+
+### Dental-clinic draft
+
+Subject: A website idea for [Clinic name]
+
+Hi [First name / Clinic team],
+
+I noticed [one specific, verified detail about the clinic's public website].
+
+I'm with Diarva Tech. We design websites that make clinic services, practical information, and links to existing appointment-booking tools easier to find on mobile and desktop.
+
+If improving [the verified part of the website] is on your list, would you be open to a short conversation? I can share a brief outline tailored to your current setup.
+
+Diarva Tech team
+tech@diarva.org | +1-365-767-0707
+277 Doon Mills Drive, Kitchener, ON N2P 2R8, Canada
+
+To stop marketing emails from Diarva Tech, reply “unsubscribe”.
+
+Before sending, replace every bracketed field, verify recipient eligibility, check SPF/DKIM/DMARC with the mailbox provider, and confirm the reply-based unsubscribe process. Do not claim a clinic-specific audit was performed unless it was. Do not claim medical compliance, guaranteed bookings, or a first-place Google ranking. Use the dental website service page as the landing destination after the site is public.

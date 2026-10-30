@@ -3,7 +3,7 @@
 ## Implemented
 
 - A dedicated, substantive page for each of the five service families, connected from the homepage and related-service links.
-- Unique page titles and descriptions, HTTPS canonical URLs, and an updated seven-page sitemap.
+- Unique page titles and descriptions, HTTPS canonical URLs, and an updated eight-page sitemap.
 - Organization and WebSite structured data on the homepage; Service and BreadcrumbList data on service pages. Only owner-supplied contact details are used. No testimonial/rating markup is included.
 - Server-readable HTML, semantic headings, native FAQ disclosure controls, and responsive styles.
 - A single configuration helper for changing the verified production origin, adding a GA4 Measurement ID, and inserting a Search Console verification token.
@@ -51,3 +51,7 @@ python3 scripts/check-site.py
 ```
 
 The helper updates static canonical/schema/social URLs, sitemap and robots URLs. It does not purchase a domain, change DNS, add redirects, or change Site access. Configure redirects and hosting separately when migrating.
+
+## Dental-clinic focus
+
+A dental clinic website-design landing page is now available at /industries/dental-websites/, linked from the homepage. It describes marketing-website scope without claiming past dental clients, clinical capabilities, compliance certifications, or guaranteed bookings. The chosen future domain is diarvatech.ca; the owner confirmed it is not registered, so the current hosted origin remains canonical.

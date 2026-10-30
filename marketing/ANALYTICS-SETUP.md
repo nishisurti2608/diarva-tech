@@ -1,6 +1,6 @@
 # Google Analytics setup status
 
-Status: integration implemented and tested; inactive because the owner has not yet supplied the intended GA4 Measurement ID. No GA account/property has been created, and live delivery to Google's reports has not been verified.
+Status: the owner supplied GA4 Measurement ID G-Z3ELKJ934Z, and it is now configured in the website. Collection begins only after visitor consent. No account/property was created by this task; delivery in the owner’s Realtime report remains unverified.
 
 ## Owner/account step
 
@@ -49,3 +49,11 @@ The integration strips query strings and fragments from page locations and sends
 - Verify the intended stream/domain and production audience. The website is still private.
 
 The automated tests validate code behaviour with a simulated ID; they do not establish that events have arrived in a real GA property.
+
+## Selected domain
+
+The owner selected diarvatech.ca but confirmed it is not registered yet. No domain was purchased or connected. Keep canonical/schema/sitemap URLs on the working hosted origin until the domain is registered, connected, and verified. Update the GA web stream URL and site origins after that migration.
+
+## Browser verification completed
+
+On the local preview, rejection left the Google tag absent; acceptance injected the tag for G-Z3ELKJ934Z; withdrawing consent caused a reload and left the tag absent again. Google Analytics report ingestion is still not verified. Test visits on the preview can appear in the real property after consent, so configure internal/developer traffic filters appropriately.

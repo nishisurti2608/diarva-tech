@@ -70,3 +70,9 @@ Removed the large preview banner. Added sample names and example companies; reta
 - Outreach templates are drafts. No recipients were selected, no email account was connected, no DNS records were changed, and no emails were sent.
 
 Outstanding: intended GA4 Measurement ID, real account settings and Realtime verification, owner-selected public launch/audience, final domain/Search Console ownership verification, approved testimonial replacement/removal, and outreach targeting/consent evidence. Search ranking, index inclusion, rich results, email deliverability, and live analytics delivery are not claimed.
+
+## Final owner-supplied analytics and dental focus
+
+The owner supplied G-Z3ELKJ934Z and selected dentists as the outreach audience. Configured that ID, added /industries/dental-websites/, and expanded source validation to 8 pages and 186 local references. All 18 automated tests pass. Browser checks confirmed no Google tag before consent or after rejection, the exact owner-supplied tag URL after acceptance, and removal of the tag after withdrawing consent and reloading. Google Analytics Realtime ingestion and property-level settings remain unverified because the account was not opened. The dental page fits 390px and 1200px widths without horizontal overflow.
+
+The owner confirmed diarvatech.ca is not registered. No domain was purchased, attached, or configured in DNS; canonical URLs intentionally remain on the working hosted origin. No outreach recipients have been supplied and no emails have been sent. Public audience and Search Console verification remain owner decisions.
