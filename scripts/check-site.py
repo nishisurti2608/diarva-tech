@@ -38,7 +38,7 @@ for a in p.links:
  href=a.get('href','')
  if href.startswith('mailto:') and not href.startswith('mailto:tech@diarva.org'):errors.append('Unexpected enquiry mailbox')
  if href.startswith('tel:') and href!='tel:+13657670707':errors.append('Unexpected telephone number')
-if p.preview and ('not real customer reviews' not in html or html.count('Sample testimonial ·')!=3):errors.append('Sample testimonials need explicit labels')
+if p.preview and (html.count('Sample testimonial ·')!=3 or html.count('Example ')!=3):errors.append('Each sample testimonial must remain labelled and use example company details')
 if '--launch' in sys.argv and p.preview:errors.append('LAUNCH GATE: replace sample testimonials with approved feedback, or remove the preview section')
 if errors:
  for error in errors:print('FAIL:',error)

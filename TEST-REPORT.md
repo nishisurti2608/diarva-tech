@@ -18,7 +18,7 @@ Result: functional checks passed. Published review remains private. Public launc
 | Browser console | Pass | No captured warnings/errors during the tested flows |
 | External portfolio URLs | Pass for HTTP reachability | www.diarva.org and the supplied TMC demo URL returned HTTP 200; client-specific authentication/access was not verified |
 | Contact destinations | Pass | tech@diarva.org, tel:+13657670707, and a map search for the owner-supplied address |
-| Testimonial samples | Pass for review only | Every quote is labelled a sample; section explicitly states these are fictional, not real reviews |
+| Testimonial samples | Pass for review only | Every quote is labelled a sample and uses an example company; the large preview notice was removed at the owner’s request |
 | Launch-only content check | Expected hold | --launch returns a failure while sample testimonials are present |
 
 ## Issues fixed
@@ -54,3 +54,7 @@ The launch command intentionally reports the testimonial placeholders until the 
 - Mailto/tel/maps destinations were inspected. No emails were sent, no phone calls placed, and no real inbox delivery was tested.
 - Browser checks used the available browser engine and responsive viewport sizes. Physical-device testing, a cross-browser matrix, a full WCAG audit, load tests, penetration testing, and production traffic benchmarks were not performed.
 - The contrast scan checks computed text/background colours and excludes decorative/hidden elements; it does not establish full accessibility compliance.
+
+## Testimonial layout refinement
+
+Removed the large preview banner. Added sample names and example companies; retained the concise Sample testimonial labels. Source checks pass with the updated labelling requirement. These remain layout examples rather than genuine customer endorsements.
