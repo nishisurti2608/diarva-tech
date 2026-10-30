@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diarva-tech.boldlemon.chatgpt.site/sitemap.xml
