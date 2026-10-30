@@ -39,13 +39,42 @@
   motionPreference.addEventListener('change', syncMotion);
   syncMotion();
   if ('IntersectionObserver' in window && !motionPreference.matches) {
-    const steps = document.querySelectorAll('.process-grid li');
+    const steps = [...document.querySelectorAll('.process-grid li')];
+    const waiting = new Set();
+    let revealTimer = null;
+    let lastReveal = -Infinity;
+    // Queue only visible steps, preserving their order with a deliberate 900ms cadence.
+    function revealNext() {
+      if (revealTimer !== null || waiting.size === 0) return;
+      revealTimer = window.setTimeout(() => {
+        revealTimer = null;
+        const next = steps.find(step => waiting.has(step));
+        if (next) {
+          waiting.delete(next);
+          next.classList.add('is-visible');
+          observer.unobserve(next);
+          lastReveal = performance.now();
+        }
+        revealNext();
+      }, Math.max(0, 900 - (performance.now() - lastReveal)));
+    }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+        if (entry.isIntersecting && !entry.target.classList.contains('is-visible')) waiting.add(entry.target);
+        else waiting.delete(entry.target);
       });
+      revealNext();
     }, { threshold: 0.12 });
     steps.forEach(step => { step.classList.add('step-reveal'); observer.observe(step); });
+    motionPreference.addEventListener('change', () => {
+      if (motionPreference.matches) {
+        window.clearTimeout(revealTimer);
+        revealTimer = null;
+        waiting.clear();
+        observer.disconnect();
+        steps.forEach(step => step.classList.add('is-visible'));
+      }
+    });
   }
   const copy = document.querySelector('.copy-email');
   const status = document.querySelector('.copy-status');
