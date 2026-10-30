@@ -30,3 +30,7 @@ Desktop menu toggle removed; mobile menu retained. Hero is a CSS/SVG animated lo
 ## Pixel logo hero
 
 The hero now uses hero-pixels.js to sample the approved SVG and wordmark into square particles. A 12-second cycle assembles, holds, and disperses the logo. Pausing freezes the animation; reduced motion renders the assembled logo. SVG fallback remains visible when canvas/image/font initialization fails. No particle library or additional service is required.
+
+## Pre-launch validation
+
+Run `python3 scripts/check-site.py` and `node --test tests/interactions.test.cjs`. See TEST-REPORT.md for browser checks, corrections, scope and limitations. Use `python3 scripts/check-site.py --launch` before a public launch; it flags the deliberately labelled sample testimonials until they are replaced or removed.

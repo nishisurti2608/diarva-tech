@@ -1,0 +1,56 @@
+# Diarva Tech — pre-launch test report
+
+Date: October 30, 2026
+
+Result: functional checks passed. Published review remains private. Public launch still requires replacing or removing the sample testimonials and intentionally enabling public access.
+
+## Checks completed
+
+| Area | Result | Evidence / scope |
+| --- | --- | --- |
+| Static document and assets | Pass | One h1/main, unique IDs, 21 section links, 7 local asset references, SVG/XML parsing, metadata, contact destinations, new-tab protection, and explicit sample labels |
+| JavaScript syntax | Pass | Both site.js and hero-pixels.js parse successfully |
+| Interaction regression suite | Pass | 8 tests covering desktop/mobile navigation, Escape focus, viewport changes, hero pause, reduced motion, ordered 900ms process reveals, offscreen queue behavior, clipboard success/error, pixel initialization/DPR limit, and image fallback |
+| Responsive layout | Pass | Browser widths 320, 390, 768, 1024, 1440px; no horizontal document overflow; all local images loaded; mobile toggle hidden on desktop |
+| Browser interactions | Pass | Mobile menu open/close and Escape, pause state, successful email copy feedback, and clicking a capability card reaches #contact |
+| Rendered text contrast | Pass after correction | 108 eligible leaf text elements checked against computed backgrounds; zero remaining findings in this limited scan |
+| Compact controls | Improved | Pause control minimum 32px; compact project/footer links have larger hit areas |
+| Browser console | Pass | No captured warnings/errors during the tested flows |
+| External portfolio URLs | Pass for HTTP reachability | www.diarva.org and the supplied TMC demo URL returned HTTP 200; client-specific authentication/access was not verified |
+| Contact destinations | Pass | tech@diarva.org, tel:+13657670707, and a map search for the owner-supplied address |
+| Testimonial samples | Pass for review only | Every quote is labelled a sample; section explicitly states these are fictional, not real reviews |
+| Launch-only content check | Expected hold | --launch returns a failure while sample testimonials are present |
+
+## Issues fixed
+
+- Three small About-section number labels had a computed contrast ratio of 4.14:1 on the off-white background. Darkened them to #666; repeat scan passed.
+- Increased compact link/control hit areas for more comfortable interaction.
+
+## Re-run commands
+
+From this directory:
+
+```sh
+python3 scripts/check-site.py
+node --test tests/interactions.test.cjs
+node --check dist/site.js
+node --check dist/hero-pixels.js
+```
+
+Before public launch:
+
+```sh
+python3 scripts/check-site.py --launch
+```
+
+The launch command intentionally reports the testimonial placeholders until the section is replaced with approved feedback or removed. It is a source-content check, not a hosting-permissions check.
+
+## Limits and remaining launch work
+
+- Replace testimonial copy and names with approved real feedback, or remove the draft section. No review ratings or review structured data were added.
+- Site audience is still owner-private. Select public access or specific external reviewers when ready.
+- Custom domain remains undecided; the current hosted subdomain works without buying one. Update canonical/social/sitemap URLs if a domain is connected.
+- Portfolio illustrations are labelled illustrative; real screenshots and precise contribution descriptions remain a content improvement.
+- Mailto/tel/maps destinations were inspected. No emails were sent, no phone calls placed, and no real inbox delivery was tested.
+- Browser checks used the available browser engine and responsive viewport sizes. Physical-device testing, a cross-browser matrix, a full WCAG audit, load tests, penetration testing, and production traffic benchmarks were not performed.
+- The contrast scan checks computed text/background colours and excludes decorative/hidden elements; it does not establish full accessibility compliance.
