@@ -22,3 +22,7 @@ Choose and connect a domain, then update canonical and Open Graph URLs, robots.t
 ## Validation performed
 
 JavaScript syntax, local HTTP response, asset loading, internal fragment targets, exact contact destinations, mobile menu and Escape closing, clipboard success feedback, and mobile/desktop horizontal overflow were checked. Browser widths checked: 390px and 1440px. Inbox delivery was not tested because this site opens the visitor's email app and sends nothing itself.
+
+## Interaction update
+
+Desktop menu toggle removed; mobile menu retained. Hero is a CSS/SVG animated logo network with pause control and reduced-motion support. Capabilities have hover and focus states with contact links. Process cards reveal on scroll. Portfolio links use www.diarva.org and the owner-supplied TMC demo URL. Reach Us shows the supplied telephone, tech@diarva.org, and Kitchener address with a specific map search.
